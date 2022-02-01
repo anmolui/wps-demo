@@ -1,0 +1,25 @@
+.po-footer {
+    background-color: $po-primary;
+    position: relative;
+    z-index: -1;
+
+    p {
+        @extend .po-container;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 15px 0;
+        font-family: $ff-r;
+        font-size: 18px;
+        color: $po-white;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $po-primary;
+        left: 0;
+        right: 0;
+        top: -10px;
+        height: 5px;
+    }
+}

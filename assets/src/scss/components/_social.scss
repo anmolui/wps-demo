@@ -1,0 +1,39 @@
+.po-social {
+    position: relative;
+}
+
+.po-social__main {
+    text-align: center;
+}
+
+.po-social__main-item {
+    padding: 3px;
+
+    &:hover {
+        filter: brightness(0.7);
+    }
+
+    img {
+        max-width: 55px;
+        height: auto;
+        margin: auto;
+
+        @include sm {
+            max-width: 28px;
+        }
+    }
+}
+
+.po-social__rocket {
+    position: fixed;
+    bottom: 75px;
+    max-height: 150px;
+    width: auto;
+    right: 15px;
+    cursor: pointer;
+
+    @include sm {
+        max-height: 75px;
+        bottom: 50px;
+    }
+}

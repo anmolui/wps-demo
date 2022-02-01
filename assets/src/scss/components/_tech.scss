@@ -1,0 +1,115 @@
+.po-tech__head {
+    max-width: 600px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 28px;
+    padding: 50px 0 15px;
+    position: relative;
+
+    h2 {
+        font-family: $ff-b;
+        color: $po-primary;
+        line-height: 125%;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        max-width: 600px;
+        width: 70%;
+        background-color: $po-secondary;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 50px;
+    }
+}
+
+.po-tech__main-item {
+    flex: 0 0 calc(25% - 30px);
+    margin: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: $ff-r;
+    overflow: hidden;
+
+    @include sm {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    @include md {
+        flex: 0 0 calc(33% - 30px);
+    }
+
+    h3 {
+        padding: 10px;
+        font-size: 24px;
+        color: $po-white;
+    }
+
+    p {
+        padding: 10px;
+        font-size: 24px;
+        margin: 0;
+    }
+
+    &.one,
+    &.seven,
+    &.thirteen {
+        h3 {
+            background-color: $po-hubspot;
+        }
+    }
+
+    &.two,
+    &.eight,
+    &.fourteen {
+        h3 {
+            background-color: $po-wordpress;
+        }
+    }
+
+    &.three,
+    &.nine,
+    &.fifteen {
+        h3 {
+            background-color: $po-sass;
+        }
+    }
+
+    &.four,
+    &.ten,
+    &.sixteen {
+        h3 {
+            background-color: $po-gulp;
+        }
+    }
+
+    &.five,
+    &.eleven,
+    &.seventeen {
+        h3 {
+            background-color: $po-css;
+        }
+    }
+
+    &.six,
+    &.twelve,
+    &.eighteen {
+        h3 {
+            background-color: $po-html;
+        }
+    }
+}
+
+.po-tech {
+    h5 {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        font-family: $ff-r;
+        color: $po-primary;
+    }
+}

@@ -1,0 +1,48 @@
+@import "colors", "typography", "variables";
+
+/*=============================================
+=            Global CSS            =
+=============================================*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $po-primary;
+}
+
+.po-container {
+    max-width: 1140px;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 auto 30px;
+}
+
+@mixin po-container {
+    max-width: 1140px;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 auto 30px;    
+}
+/*=====  End of Global CSS  ======*/

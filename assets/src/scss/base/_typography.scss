@@ -1,0 +1,52 @@
+/*==========================================================
+=            Typography Variable and Declaration            =
+============================================================*/
+@font-face {
+    font-family: 'nunito-bold';
+    src: url('../fonts/nunito-sans/NunitoSans-Bold.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nunito-extrabold';
+    src: url('../fonts/nunito-sans/NunitoSans-ExtraBold.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nunito-regular';
+    src: url('../fonts/nunito-sans/NunitoSans-Regular.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nunito-semibold';
+    src: url('../fonts/nunito-sans/NunitoSans-SemiBold.ttf');
+    font-style: normal;
+    font-display: swap;
+}
+
+/*----------  Font Family Variable  ----------*/
+
+$ff-b       : 'nunito-bold';
+$ff-eb      : 'nunito-extrabold';
+$ff-r       : 'nunito-regular';
+$ff-sb      : 'nunito-semibold';
+
+/*----------  Font Size Variable  ----------*/
+
+$fs-xxl-large     : 150px;
+$fs-xx-large      : 70px;
+$fs-xm-large      : 63px;
+$fs-x-large       : 48px;
+$fs-large         : 30px;
+$fs-xs-medium     : 25px;
+$fs-medium        : 20px;
+$fs-normal        : 16px;
+$fs-small         : 14px;
+$fs-x-small       : 12px;
+
+/*=====  End of Typography Variable and Declaration  ======*/
