@@ -1,0 +1,86 @@
+/*==========================================================
+=            Typography Variable and Declaration            =
+============================================================*/
+@font-face {
+  font-family: 'nunito-bold';
+  src: url("../fonts/nunito-sans/NunitoSans-Bold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-extrabold';
+  src: url("../fonts/nunito-sans/NunitoSans-ExtraBold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-regular';
+  src: url("../fonts/nunito-sans/NunitoSans-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-semibold';
+  src: url("../fonts/nunito-sans/NunitoSans-SemiBold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+/*----------  Font Family Variable  ----------*/
+/*----------  Font Size Variable  ----------*/
+/*=====  End of Typography Variable and Declaration  ======*/
+/*======================================
+=            Themes Variable           =
+========================================*/
+/*=====  End of Themes Variable  ======*/
+/*=============================================
+=            Global CSS            =
+=============================================*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2F2F2F;
+}
+
+.wps-d-container {
+  max-width: 1140px;
+  padding: 0 15px;
+  width: calc(100% - 30px);
+  margin: 0 auto 30px;
+}
+
+/*=====  End of Global CSS  ======*/
+/*=============================================
+=            Header Section            =
+=============================================*/
+/*=====  End of Header Section  ======*/
+/*=============================================
+=            Footer Section CSS            =
+=============================================*/
+/*=====  End of Footer Section CSS  ======*/

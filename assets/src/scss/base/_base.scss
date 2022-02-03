@@ -29,20 +29,13 @@ li {
 
 a {
     text-decoration: none;
-    color: $po-primary;
+    color: $wps-d-primary;
 }
 
-.po-container {
+.wps-d-container {
     max-width: 1140px;
     padding: 0 15px;
     width: calc(100% - 30px);
     margin: 0 auto 30px;
-}
-
-@mixin po-container {
-    max-width: 1140px;
-    padding: 0 15px;
-    width: calc(100% - 30px);
-    margin: 0 auto 30px;    
 }
 /*=====  End of Global CSS  ======*/

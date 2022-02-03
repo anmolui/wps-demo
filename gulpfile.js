@@ -41,14 +41,14 @@ function html() {
 }
 // clean
 function clean() {
-    return del(['./assets/dist/']);
+    return del(['./main']);
 }
 
 // imges
 function images() {
     return gulp
         .src('./assets/src/image/**/*')
-        .pipe(newer('./assets/dist/image'))
+        .pipe(newer('./main'))
         .pipe(
             imagemin([
                 imagemin.gifsicle({ interlaced: true }),
@@ -62,7 +62,7 @@ function images() {
                 })
             ])
         )
-        .pipe(gulp.dest('./assets/dist/image'));
+        .pipe(gulp.dest('./main'));
 }
 
 // css
@@ -72,14 +72,14 @@ function css() {
             './assets/src/scss/main.scss',
         ])
         .pipe(plumber())
-        .pipe(concat('main.css'))
+        .pipe(concat('wps-d-style.css'))
         .pipe(sass({ outputStyle: "expanded" }))
-        .pipe(gulp.dest("./assets/dist/css/"))
+        .pipe(gulp.dest("./main"))
         .pipe(rename({ suffix: ".min" }))
         .pipe(postcss([cssnano()]))
-        .pipe(gulp.dest("./assets/dist/css/"))
+        .pipe(gulp.dest("./main"))
         .pipe(postcss([autoprefixer(), combineMediaQuery()]))
-        .pipe(gulp.dest("./assets/dist/css/"))
+        .pipe(gulp.dest("./main"))
         // .pipe(mediaQueriesSplitter([
         //     { media: 'none', filename: 'base.css' },
         //     { media: [{ min: '576px', minUntil: '768px' }, { min: '576px', max: '768px' }], filename: 'tablet.css' },
@@ -97,15 +97,14 @@ function scripts() {
     return (
         gulp
         .src([
-            './node_modules/jquery/dist/jquery.js',
             './assets/src/js/**/*',
         ])
         .pipe(plumber())
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('./assets/dist/js/'))
+        .pipe(concat('wps-d-script.js'))
+        .pipe(gulp.dest('./main'))
         .pipe(terser())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./assets/dist/js/'))
+        .pipe(gulp.dest('./main'))
         .pipe(browsersync.stream())
     );
 }
@@ -116,7 +115,7 @@ function fonts() {
         gulp
         .src('./assets/src/fonts/**/*')
         .pipe(plumber())
-        .pipe(gulp.dest('./assets/dist/fonts'))
+        .pipe(gulp.dest('./main'))
         .pipe(browsersync.stream())
     );
 }
