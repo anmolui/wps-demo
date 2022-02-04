@@ -2,29 +2,29 @@
 =            Typography Variable and Declaration            =
 ============================================================*/
 @font-face {
-  font-family: 'nunito-bold';
-  src: url("../fonts/nunito-sans/NunitoSans-Bold.ttf");
+  font-family: 'inter';
+  src: url("inter.ttf");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'nunito-extrabold';
-  src: url("../fonts/nunito-sans/NunitoSans-ExtraBold.ttf");
+  font-family: 'DM-bold';
+  src: url("DM-bold.ttf");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'nunito-regular';
-  src: url("../fonts/nunito-sans/NunitoSans-Regular.ttf");
+  font-family: 'DM-medium';
+  src: url("DM-medium.ttf");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'nunito-semibold';
-  src: url("../fonts/nunito-sans/NunitoSans-SemiBold.ttf");
+  font-family: 'DM-regular';
+  src: url("DM-regular.ttf");
   font-style: normal;
   font-display: swap;
 }
@@ -39,6 +39,10 @@
 /*=============================================
 =            Global CSS            =
 =============================================*/
+* {
+  font-family: "inter";
+}
+
 html,
 body {
   margin: 0;
@@ -65,7 +69,6 @@ li {
 
 a {
   text-decoration: none;
-  color: #2F2F2F;
 }
 
 .wps-d-container {
@@ -73,6 +76,15 @@ a {
   padding: 0 15px;
   width: calc(100% - 30px);
   margin: 0 auto 30px;
+}
+
+.wps-d-button {
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 13px;
+  font-size: 14px;
+  background-color: #f5f5fe;
+  color: #483de0;
 }
 
 /*=====  End of Global CSS  ======*/

@@ -1,8 +1,13 @@
-@import "colors", "typography", "variables";
+@import "colors", "general", "typography", "variables";
 
 /*=============================================
 =            Global CSS            =
 =============================================*/
+
+* {
+    font-family: $wps-d-ff-i;
+}
+
 html,
 body {
     margin: 0;
@@ -29,7 +34,6 @@ li {
 
 a {
     text-decoration: none;
-    color: $wps-d-primary;
 }
 
 .wps-d-container {
@@ -38,4 +42,14 @@ a {
     width: calc(100% - 30px);
     margin: 0 auto 30px;
 }
+
+.wps-d-button {
+    display: inline-block;
+    padding: $wps-d-btn-p;
+    border-radius: $wps-d-br-l;
+    font-size: $wps-d-fs-xxxs;
+    background-color: $wps-d-primary-low;
+    color: $wps-d-primary;
+}
+
 /*=====  End of Global CSS  ======*/

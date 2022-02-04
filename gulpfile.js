@@ -42,6 +42,7 @@ function html() {
 // clean
 function clean() {
     return del(['./main']);
+    return del(['./components/css']);
 }
 
 // imges
@@ -92,6 +93,18 @@ function css() {
         .pipe(browsersync.stream());
 }
 
+// Components css
+function componentsCss() {
+    return gulp
+        .src([
+            './assets/src/scss/components/_components.scss',
+        ])
+        .pipe(plumber())
+        .pipe(concat('components.css'))
+        .pipe(sass({ outputStyle: "expanded" }))
+        .pipe(gulp.dest("./components/css"))
+        .pipe(browsersync.stream());
+}
 // scripts
 function scripts() {
     return (
@@ -116,6 +129,7 @@ function fonts() {
         .src('./assets/src/fonts/**/*')
         .pipe(plumber())
         .pipe(gulp.dest('./main'))
+        .pipe(gulp.dest('./components/css'))
         .pipe(browsersync.stream())
     );
 }
@@ -123,17 +137,19 @@ function fonts() {
 // watch changes
 function watchFiles() {
     gulp.watch('./assets/src/scss/**/*', css);
+    gulp.watch('./assets/src/scss/components/*', componentsCss);
     gulp.watch('./assets/src/js/**/*', scripts);
     gulp.watch('./assets/src/image/**/*', images);
     gulp.watch('./assets/src/fonts/**/*', fonts);
 }
 
-const start = gulp.series(clean, images, fonts, css, scripts);
+const start = gulp.series(clean, images, fonts, css, componentsCss, scripts);
 const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
 exports.images = images;
 exports.css = css;
+exports.componentsCss = componentsCss;
 exports.scripts = scripts;
 exports.clean = clean;
 exports.watch = watch;

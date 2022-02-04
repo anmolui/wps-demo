@@ -1,0 +1,219 @@
+/*==========================================================
+=            Typography Variable and Declaration            =
+============================================================*/
+@font-face {
+  font-family: 'inter';
+  src: url("inter.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM-bold';
+  src: url("DM-bold.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM-medium';
+  src: url("DM-medium.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM-regular';
+  src: url("DM-regular.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+/*----------  Font Family Variable  ----------*/
+/*----------  Font Size Variable  ----------*/
+/*=====  End of Typography Variable and Declaration  ======*/
+/*======================================
+=            Themes Variable           =
+========================================*/
+/*=====  End of Themes Variable  ======*/
+/*=============================================
+=            Global CSS            =
+=============================================*/
+* {
+  font-family: "inter";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wps-d-container {
+  max-width: 1140px;
+  padding: 0 15px;
+  width: calc(100% - 30px);
+  margin: 0 auto 30px;
+}
+
+.wps-d-button {
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 13px;
+  font-size: 14px;
+  background-color: #f5f5fe;
+  color: #483de0;
+}
+
+/*=====  End of Global CSS  ======*/
+.wps-d-tm__btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__btn {
+    display: inline-flex;
+    position: fixed;
+    right: 10px;
+    top: 18px;
+    cursor: pointer;
+  }
+}
+
+.wps-d-tm__btn svg circle {
+  fill: #1e1e1e;
+}
+
+.wps-d-tm__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.wps-d-tm__nav-logo-wrap {
+  line-height: 0;
+}
+
+.wps-d-tm__nav-logo-img {
+  width: auto;
+  height: 50px;
+}
+
+.wps-d-tm__nav-list {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-list {
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    align-items: unset;
+    max-width: 250px;
+    flex-wrap: wrap;
+    padding: 15px 10px 0;
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0px 2px 6px 1px #0000001c;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-list--show {
+    z-index: 99999 !important;
+    opacity: 1 !important;
+    pointer-events: unset;
+  }
+}
+
+.wps-d-tm__nav-item {
+  margin-left: 15px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-item {
+    flex: 1 0 calc(50% - 15px);
+    margin-bottom: 15px;
+    padding: 0 0 15px;
+  }
+}
+
+.wps-d-tm__nav-item.active-link .wps-d-tm__nav-link {
+  color: #483de0;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-item.active-link .wps-d-tm__nav-link {
+    color: #fc9918;
+  }
+}
+
+.wps-d-tm__nav-item.active-link .wps-d-tm__nav-link.wps-d-button {
+  color: #fff;
+  background-color: #483de0;
+}
+
+.wps-d-tm__nav-item:hover .wps-d-tm__nav-link {
+  color: #483de0;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-item:hover .wps-d-tm__nav-link {
+    color: #fc9918;
+  }
+}
+
+.wps-d-tm__nav-item:hover .wps-d-tm__nav-link.wps-d-button {
+  color: #fff;
+  background-color: #483de0;
+}
+
+.wps-d-tm__nav-link {
+  color: #1e1e1e;
+  letter-spacing: 0.3px;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .wps-d-tm__nav-link {
+    color: #fff;
+  }
+}
+
+.wps-d-tm__nav-link .icon {
+  display: none;
+}
+
+.wps-d-tm__nav-link.wps-d-button {
+  color: #483de0;
+}

@@ -1,0 +1,123 @@
+.wps-d-tm__btn {
+    display: none;
+
+    @include lg {
+        display: inline-flex;
+        position: fixed;
+        right: 10px;
+        top: 18px;
+        cursor: pointer;
+    }
+
+    svg {
+        circle {
+            fill: $wps-d-dark;
+        }
+    }
+}
+
+.wps-d-tm__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.wps-d-tm__nav-logo-wrap {
+    line-height: 0;
+}
+
+.wps-d-tm__nav-logo-img {
+    width: auto;
+    height: 50px;
+}
+
+.wps-d-tm__nav-list {
+    display: flex;
+    align-items: center;
+
+    @include lg {
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        align-items: unset;
+        max-width: 250px;
+        flex-wrap: wrap;
+        padding: 15px 10px 0;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        border-radius: 10px;
+        background-color: $wps-d-dark;
+        box-shadow: $wps-d-bs-dark;
+        transition: all 0.3s ease;
+    }
+}
+
+.wps-d-tm__nav-list--show {
+    @include lg {
+        z-index: 99999 !important;
+        opacity: 1 !important;
+        pointer-events: unset;
+    }
+}
+
+.wps-d-tm__nav-item {
+    margin-left: 15px;
+    position: relative;
+
+    @include lg {
+        flex: 1 0 calc(50% - 15px);
+        margin-bottom: 15px;
+        padding: 0 0 15px;
+    }
+
+    &.active-link {
+        .wps-d-tm__nav-link {
+            color: $wps-d-primary;
+            font-weight: 600;
+
+            @include lg {
+                color: $wps-d-secondary;
+            }
+
+            &.wps-d-button {
+                color: $wps-d-light;
+                background-color: $wps-d-primary;
+            }
+        }
+    }
+
+    &:hover {
+        .wps-d-tm__nav-link {
+            color: $wps-d-primary;
+
+            @include lg {
+                color: $wps-d-secondary;
+            }
+
+            &.wps-d-button {
+                color: $wps-d-light;
+                background-color: $wps-d-primary;
+            }
+        }
+    }
+}
+
+.wps-d-tm__nav-link {
+    color: $wps-d-dark;
+    letter-spacing: 0.3px;
+    transition: background-color 0.3s ease;
+
+    @include lg {
+        color: $wps-d-light;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    &.wps-d-button {
+        color: $wps-d-primary;
+    }
+}

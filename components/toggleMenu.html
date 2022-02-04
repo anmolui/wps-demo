@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Menu</title>
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <!-- = Toggle Menu Start = -->
+    <header class="wps-d-tm__head">
+        <!-- = toggle button Start = -->
+        <div class="wps-d-tm__btn">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="6" r="3" fill="black" />
+                <circle cx="16" cy="26" r="3" fill="black" />
+                <circle cx="16" cy="16" r="3" fill="black" />
+            </svg>
+        </div>
+        <!-- = toggle button End = -->
+        <!-- = Menu Elements Start = -->
+        <nav class="wps-d-tm__nav">
+            <div class="wps-d-tm__nav-logo-wrap">
+                <img src="logo.png" alt="" class="wps-d-tm__nav-logo-img">
+            </div>
+            <ul class="wps-d-tm__nav-list">
+                <li class="wps-d-tm__nav-item active-link">
+                    <a href="#" class="wps-d-tm__nav-link">
+                        <span class="icon"></span>
+                        <span class="text">Shop</span>
+                    </a>
+                </li>
+                <li class="wps-d-tm__nav-item">
+                    <a href="#" class="wps-d-tm__nav-link">
+                        <span class="icon"></span>
+                        <span class="text">Cart</span>
+                    </a>
+                </li>
+                <li class="wps-d-tm__nav-item">
+                    <a href="#" class="wps-d-tm__nav-link">
+                        <span class="icon"></span>
+                        <span class="text">Checkout</span>
+                    </a>
+                </li>
+                <li class="wps-d-tm__nav-item">
+                    <a href="#" class="wps-d-tm__nav-link">
+                        <span class="icon"></span>
+                        <span class="text">Get Personal Demo</span>
+                    </a>
+                </li>
+                <li class="wps-d-tm__nav-item">
+                    <a href="#" class="wps-d-tm__nav-link wps-d-button">
+                        <span class="icon"></span>
+                        <span class="text">Buy Now</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- = Menu Elements End = -->
+    </header>
+    <!-- = Toggle Menu End = -->
+    <script src="../jquery.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('.wps-d-tm__btn').on('click', function(){
+                jQuery('.wps-d-tm__nav-list').toggleClass('wps-d-tm__nav-list--show');
+            })
+            jQuery('.wps-d-tm__nav-item').on('click', function(){
+                jQuery(this).prevAll().removeClass('active-link')
+                jQuery(this).nextAll().removeClass('active-link')
+                jQuery(this).addClass('active-link')
+            })
+        })
+    </script>
+</body>
+
+</html>
