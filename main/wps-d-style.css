@@ -71,8 +71,18 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+img:focus {
+  outline: none;
+}
+
 .wps-d-container {
-  max-width: 1140px;
+  max-width: 1260px;
   padding: 0 15px;
   width: calc(100% - 30px);
   margin: 0 auto 30px;
@@ -80,7 +90,7 @@ a {
 
 .wps-d-button {
   display: inline-block;
-  padding: 13px 30px;
+  padding: 20px 30px;
   border-radius: 13px;
   font-size: 14px;
   background-color: #f5f5fe;

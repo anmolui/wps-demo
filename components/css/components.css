@@ -71,8 +71,18 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+img:focus {
+  outline: none;
+}
+
 .wps-d-container {
-  max-width: 1140px;
+  max-width: 1260px;
   padding: 0 15px;
   width: calc(100% - 30px);
   margin: 0 auto 30px;
@@ -80,7 +90,7 @@ a {
 
 .wps-d-button {
   display: inline-block;
-  padding: 13px 30px;
+  padding: 20px 30px;
   border-radius: 13px;
   font-size: 14px;
   background-color: #f5f5fe;
@@ -97,7 +107,7 @@ a {
     display: inline-flex;
     position: fixed;
     right: 10px;
-    top: 18px;
+    top: 20px;
     cursor: pointer;
   }
 }
@@ -106,11 +116,15 @@ a {
   fill: #1e1e1e;
 }
 
+.wps-d-tm__head {
+  box-shadow: 0px 2px 6px 1px #0000001c;
+}
+
 .wps-d-tm__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .wps-d-tm__nav-logo-wrap {
@@ -137,7 +151,7 @@ a {
     flex-wrap: wrap;
     padding: 15px 10px 0;
     position: fixed;
-    top: 60px;
+    top: 80px;
     right: 15px;
     border-radius: 10px;
     background-color: #1e1e1e;
@@ -161,15 +175,13 @@ a {
 
 @media (max-width: 992px) {
   .wps-d-tm__nav-item {
-    flex: 1 0 calc(50% - 15px);
-    margin-bottom: 15px;
-    padding: 0 0 15px;
+    flex: 1 0 calc(50% - 20px);
+    margin-bottom: 20px;
   }
 }
 
 .wps-d-tm__nav-item.active-link .wps-d-tm__nav-link {
   color: #483de0;
-  font-weight: 600;
 }
 
 @media (max-width: 992px) {
@@ -201,6 +213,8 @@ a {
 .wps-d-tm__nav-link {
   color: #1e1e1e;
   letter-spacing: 0.3px;
+  font-weight: 400;
+  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 
