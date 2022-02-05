@@ -81,22 +81,6 @@ img:focus {
   outline: none;
 }
 
-.wps-d-container {
-  max-width: 1260px;
-  padding: 0 15px;
-  width: calc(100% - 30px);
-  margin: 0 auto 30px;
-}
-
-.wps-d-button {
-  display: inline-block;
-  padding: 20px 30px;
-  border-radius: 13px;
-  font-size: 14px;
-  background-color: #f5f5fe;
-  color: #483de0;
-}
-
 /*=====  End of Global CSS  ======*/
 .wps-d-tm__btn {
   display: none;
@@ -230,4 +214,37 @@ img:focus {
 
 .wps-d-tm__nav-link.wps-d-button {
   color: #483de0;
+}
+
+.wps-d-button {
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 13px;
+  font-size: 14px;
+  background-color: #f5f5fe;
+  color: #483de0;
+  transition: all .3s ease;
+}
+
+.wps-d-button:hover {
+  background-color: #483de0;
+  color: #fff;
+}
+
+.wps-d-container {
+  max-width: 1260px;
+  padding: 0 15px;
+  width: calc(100% - 30px);
+  margin: 0 auto 30px;
+}
+
+.wps-d-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px 1px #0000001c;
+  padding: 30px 15px 15px;
+}
+
+.wps-d-card img {
+  width: 100%;
 }

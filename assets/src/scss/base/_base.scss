@@ -45,21 +45,4 @@ a:focus {
 img:focus {
     outline: none;
 }
-
-.wps-d-container {
-    max-width: 1260px;
-    padding: 0 15px;
-    width: calc(100% - 30px);
-    margin: 0 auto 30px;
-}
-
-.wps-d-button {
-    display: inline-block;
-    padding: $wps-d-btn-p;
-    border-radius: $wps-d-br-l;
-    font-size: $wps-d-fs-xxxs;
-    background-color: $wps-d-primary-low;
-    color: $wps-d-primary;
-}
-
 /*=====  End of Global CSS  ======*/

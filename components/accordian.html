@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <div class="wps-d-accordian">
+        <div class="wps-d-accordian__head">Is there any feature in the rewards plugin by which we can give the points on the order total?</div>
+        <div class="wps-d-accordian__body">
+            <p>Yes, the plugin offers the following setting for the customers to earn points on their order total. To enable this feature, go to the plugin setting > Order Total Points tab > Enable the settings for the orders > Enter Points with Order Range.</p>
+        </div>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+    jQuery('.wps-d-accordian__body').hide();
+    jQuery(".wps-d-accordian__head").on('click', function() {
+        jQuery(this).next('.wps-d-accordian__body').slideToggle()
+    })
+    </script>
+</body>
+
+</html>

@@ -1,1 +1,39 @@
 @import "./../base/base", "toggleMenu";
+
+// Button
+
+.wps-d-button {
+    display: inline-block;
+    padding: $wps-d-btn-p;
+    border-radius: $wps-d-br-l;
+    font-size: $wps-d-fs-xxxs;
+    background-color: $wps-d-primary-low;
+    color: $wps-d-primary;
+    transition: all .3s ease;
+    &:hover {
+        background-color: $wps-d-primary;
+        color: $wps-d-light;
+    }
+}
+
+// Container
+
+.wps-d-container {
+    max-width: 1260px;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    margin: 0 auto 30px;
+}
+
+// Cards
+
+.wps-d-card {
+    border-radius: $wps-d-br-m;
+    overflow: hidden;
+    box-shadow: $wps-d-bs-dark;
+    padding: $wps-d-box-p;
+
+    img {
+        width: 100%;
+    }
+}
