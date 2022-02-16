@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <div class="wps-d-popup">
+        <div class="wps-d-popup__btn wps-d-button">Open Yati</div>
+        <div class="wps-d-popup__content">
+            <div class="wps-d-popup__content-body">
+                <p>Yes, the plugin offers the following setting for the customers to earn points on their order total. To enable this feature, go to the plugin setting > Order Total Points tab > Enable the settings for the orders > Enter Points with Order
+                    Range.
+                </p>
+            </div>
+            <div class="wps-d-popup__content-btn">
+                <a href="#" class="wps-d-popup__content-btn-link wps-d-button wps-d-body-button">More</a>
+                <span class="wps-d-popup__content-btn-close wps-d-button wps-d-body-button">Close</a>
+                </div>
+            </div>
+        </div>
+        <script src="../jquery.js"></script>
+        <script>
+        jQuery('.wps-d-popup__btn').on('click', function() {
+            jQuery('.wps-d-popup__content').addClass('wps-d-popup__content--show');
+            jQuery('.wps-d-popup__content-btn-close').on('click', function() {
+              jQuery('.wps-d-popup__content').removeClass('wps-d-popup__content--show');
+            })
+        })
+        </script>
+    </body>
+
+    </html>

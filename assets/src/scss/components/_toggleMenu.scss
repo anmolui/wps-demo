@@ -1,6 +1,5 @@
 .wps-d-tm__btn {
     display: none;
-
     @include lg {
         display: inline-flex;
         position: fixed;
@@ -8,7 +7,6 @@
         top: 20px;
         cursor: pointer;
     }
-
     svg {
         circle {
             fill: $wps-d-dark;
@@ -39,7 +37,6 @@
 .wps-d-tm__nav-list {
     display: flex;
     align-items: center;
-
     @include lg {
         z-index: -1;
         opacity: 0;
@@ -69,35 +66,28 @@
 .wps-d-tm__nav-item {
     margin-left: 15px;
     position: relative;
-
     @include lg {
         flex: 1 0 calc(50% - 20px);
         margin-bottom: 20px;
     }
-
     &.active-link {
         .wps-d-tm__nav-link {
             color: $wps-d-primary;
-
             @include lg {
                 color: $wps-d-secondary;
             }
-
             &.wps-d-button {
                 color: $wps-d-light;
                 background-color: $wps-d-primary;
             }
         }
     }
-
     &:hover {
         .wps-d-tm__nav-link {
             color: $wps-d-primary;
-
             @include lg {
                 color: $wps-d-secondary;
             }
-
             &.wps-d-button {
                 color: $wps-d-light;
                 background-color: $wps-d-primary;
@@ -112,15 +102,12 @@
     font-weight: 400;
     font-size: $wps-d-fs-xxxs;
     transition: background-color 0.3s ease;
-
     @include lg {
         color: $wps-d-light;
     }
-
     .icon {
         display: none;
     }
-
     &.wps-d-button {
         color: $wps-d-primary;
     }
